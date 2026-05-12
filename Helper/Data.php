@@ -65,7 +65,7 @@ class Data extends AbstractHelper
      * @param int|null $storeId store id
      * @return mixed config entry value
      */
-    private function getConfigValue($field, $storeId = null)
+    private function getConfigValue($field, mixed $storeId = null)
     {
         // if have it locally, return. Do not want to flush Magento cache every time config entry is updated = slow.
         if (isset($this->cacheValues[$field])) {
@@ -86,7 +86,7 @@ class Data extends AbstractHelper
      * @param int|null $storeId store id
      * @return mixed config entry value
      */
-    public function getGeneralConfig($code, $storeId = null)
+    public function getGeneralConfig($code, mixed $storeId = null)
     {
         return $this->getConfigValue(self::XML_PATH . $code, $storeId);
     }

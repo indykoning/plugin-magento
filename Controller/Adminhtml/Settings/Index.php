@@ -158,7 +158,7 @@ class Index extends Action
      *
      * @return String
      */
-    private function _getOption($name, $default = null)
+    private function _getOption($name, mixed $default = null)
     {
         $value = $this->dataHelper->getGeneralConfig($name);
 
